@@ -169,6 +169,34 @@ footer{background:#050506;border-top:1px solid var(--line);padding:64px 0 34px}
 .foot-top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:24px}
 .foot-bottom{color:#5a5a5e;font-size:12.5px;letter-spacing:.03em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+/* value band + landing pages (Domani teaching layer) */
+.valueband{background:linear-gradient(180deg,#0b0b0d,#070708);border-top:1px solid var(--line);position:relative}
+.vb-tag{text-align:center;font-size:10px;letter-spacing:.42em;color:var(--gold);opacity:.75;padding-top:34px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
+.feat{background:var(--bg);padding:30px 28px;transition:.35s}
+.feat:hover{background:var(--card)}
+.feat .fic{color:var(--gold);margin-bottom:16px}
+.feat .fic .ic{width:34px;height:34px;stroke-width:1.2}
+.feat h4{font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:8px}
+.feat p{color:var(--muted);font-size:13.5px;line-height:1.55}
+.anchor-line{margin-top:48px;text-align:center;padding:34px 30px;border:1px solid rgba(201,169,106,.32);font-family:var(--serif);font-size:clamp(21px,3vw,32px);color:var(--gold-soft);line-height:1.3}
+.anchor-line b{color:var(--ink)}
+.land-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:1040px){.land-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.land-grid{grid-template-columns:repeat(2,1fr)}}
+.land{background:var(--card);border:1px solid var(--line);overflow:hidden;transition:.3s}
+.land:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 24px 46px -26px rgba(0,0,0,.8)}
+.land .bar{display:flex;align-items:center;gap:5px;padding:8px 10px;background:#0b0b0d;border-bottom:1px solid var(--line)}
+.land .bar i{width:7px;height:7px;border-radius:50%;background:#34353b;display:block}
+.land .url{margin-left:6px;font-size:9px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.land .thumb{aspect-ratio:16/10;overflow:hidden;position:relative}
+.land .thumb img{width:100%;height:100%;object-fit:cover;filter:brightness(.86)}
+.land .rank{position:absolute;top:8px;left:8px;background:rgba(9,9,10,.82);border:1px solid var(--gold);color:var(--gold-soft);font-size:8.5px;letter-spacing:.06em;padding:3px 7px;text-transform:uppercase}
+.land .lt{padding:13px 14px 16px}
+.land .lt h5{font-family:var(--serif);font-size:16px;font-weight:600;line-height:1.2;margin-bottom:5px}
+.land .lt span{font-size:10.5px;letter-spacing:.04em;color:var(--gold)}
 .reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 </style>
@@ -272,6 +300,30 @@ footer{background:#050506;border-top:1px solid var(--line);padding:64px 0 34px}
       <svg class="grid-svg" viewBox="0 0 400 400"><g stroke="#2a2a2c" fill="none" stroke-width="1"><path d="M0 80 H400 M0 180 H400 M0 280 H400 M100 0 V400 M220 0 V400 M320 0 V400"/></g><path d="M0 300 Q200 260 400 320 L400 400 L0 400 Z" fill="#0d1418" opacity=".7"/></svg>
       <div class="pin"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><b class="serif">Limassol Marina</b></div>
     </div>
+  </div>
+</section>
+
+<section class="valueband" id="included">
+  <div class="vb-tag">◆ BUILT BY DOMANI AI</div>
+  <div class="wrap" style="padding-top:34px">
+    <div class="sec-head reveal" style="margin:0 auto 54px;text-align:center">
+      <div class="label" id="incl_eye"></div>
+      <h2 id="incl_h" style="margin-top:14px"></h2>
+      <p id="incl_p" style="margin:16px auto 0"></p>
+    </div>
+    <div class="feat-grid" id="feat-grid"></div>
+    <div class="anchor-line reveal" id="anchor_line"></div>
+  </div>
+</section>
+
+<section id="found">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label" id="found_eye"></div>
+      <h2 id="found_h" style="margin-top:14px"></h2>
+      <p id="found_p"></p>
+    </div>
+    <div class="land-grid" id="land-grid"></div>
   </div>
 </section>
 
@@ -388,7 +440,7 @@ function setLang(lang){
  document.querySelectorAll('[data-i]').forEach(el=>{const k=el.getAttribute('data-i');if(T[lang][k]!=null)el.innerHTML=T[lang][k];});
  document.querySelectorAll('[data-i-ph]').forEach(el=>{const k=el.getAttribute('data-i-ph');if(T[lang][k]!=null)el.placeholder=T[lang][k];});
  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
- renderGrid();renderChips();
+ renderGrid();renderChips();renderExtras();
  const body=document.getElementById('pbody');
  if(body&&body.dataset.started!=='1'){body.innerHTML='';bubble(T[lang].greet,'b');}
 }
@@ -407,9 +459,49 @@ function askCar(i){openChat();const c=CARS[i];const b=document.getElementById('p
   :`The <b>${c.name}</b> (${c.year}) — ${c.km} km, ${c.origin}. Priced at <b>${c.price}</b>, available now. Shall I arrange a private viewing?`;botSay(a);}
 function send(){const inp=document.getElementById('pin');const v=inp.value.trim();if(!v)return;document.getElementById('pbody').dataset.started='1';bubble(v,'u');inp.value='';
  const low=v.toLowerCase();let i=0;if(/import|regist|εγγρ|τελων|регист|импорт|таможн/i.test(low))i=1;else if(/view|νview|ραντεβ|θέασ|просмотр|driv|test/i.test(low))i=2;else if(/financ|χρηματ|финанс|trade|ανταλλ|трейд|rate|loan/i.test(low))i=3;else i=0;botSay(ANS[L()][i]);}
+const SEC={
+ en:{incl_eye:'Behind the showroom',incl_h:'Everything built in — why it’s worth €80,000',incl_p:'This isn’t a template. Every piece below is included, and maintained for two years.',anchor:'A <b>€80,000</b> build. Your investment — <b>one good car</b> from your lot.',found_eye:'Found everywhere',found_h:'A page for every search in Cyprus',found_p:'We build 10+ local landing pages — so buyers find you on Google and AI search, whatever they type.'},
+ el:{incl_eye:'Πίσω από το showroom',incl_h:'Όλα ενσωματωμένα — γιατί αξίζει €80.000',incl_p:'Δεν είναι template. Κάθε στοιχείο παρακάτω περιλαμβάνεται και συντηρείται για δύο χρόνια.',anchor:'Κατασκευή <b>€80.000</b>. Η επένδυσή σας — <b>ένα καλό αυτοκίνητο</b> από τον χώρο σας.',found_eye:'Παντού βρίσκεστε',found_h:'Μια σελίδα για κάθε αναζήτηση στην Κύπρο',found_p:'Φτιάχνουμε 10+ τοπικές landing pages — για να σας βρίσκουν στη Google και στην AI αναζήτηση, ό,τι κι αν γράψουν.'},
+ ru:{incl_eye:'За кулисами шоурума',incl_h:'Всё встроено — почему это стоит €80 000',incl_p:'Это не шаблон. Всё ниже включено и поддерживается два года.',anchor:'Сборка на <b>€80 000</b>. Ваша инвестиция — <b>один хороший авто</b> с вашей площадки.',found_eye:'Вас найдут везде',found_h:'Страница под каждый поиск на Кипре',found_p:'Мы строим 10+ локальных лендингов — вас находят в Google и AI-поиске, что бы ни ввели.'}
+};
+const FEATURES=[
+ {ic:'<path d="M12 2l3 7 7 .5-5.5 4.5 2 7L12 17l-6.5 4 2-7L2 9.5 9 9z"/>',en:['Bespoke luxury design','A site that looks like a global marque — buyers trust what looks expensive.'],el:['Σχεδιασμός πολυτελείας','Ένα site σαν παγκόσμια μάρκα — οι αγοραστές εμπιστεύονται ό,τι δείχνει ακριβό.'],ru:['Люксовый дизайн','Сайт как у мирового бренда — доверие к тому, что выглядит дорого.']},
+ {ic:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',en:['24/7 AI concierge','Answers every buyer instantly, in their language — even at 2am.'],el:['AI concierge 24/7','Απαντά σε κάθε αγοραστή άμεσα, στη γλώσσα του — ακόμα και στις 2 τη νύχτα.'],ru:['AI-консьерж 24/7','Мгновенно отвечает каждому на его языке — даже в 2 ночи.']},
+ {ic:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',en:['Three languages','The whole site and the concierge in Greek, English & Russian.'],el:['Τρεις γλώσσες','Όλο το site και ο concierge στα Ελληνικά, Αγγλικά & Ρωσικά.'],ru:['Три языка','Весь сайт и консьерж на греческом, английском и русском.']},
+ {ic:'<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>',en:['10+ landing pages','A dedicated page for every car type and every city.'],el:['10+ landing pages','Ειδική σελίδα για κάθε τύπο αυτοκινήτου και κάθε πόλη.'],ru:['10+ лендингов','Отдельная страница под каждый тип авто и каждый город.']},
+ {ic:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/>',en:['Found on Google & AI','Ranked on Google and cited when buyers ask ChatGPT for a Cyprus dealer.'],el:['Google & AI','Στην κορυφή της Google και στις απαντήσεις AI για αντιπροσωπείες Κύπρου.'],ru:['Google и AI-поиск','В топе Google и в ответах ChatGPT про автосалоны Кипра.']},
+ {ic:'<path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/>',en:['Live inventory','Cars sync automatically — sold today, gone from the site today.'],el:['Ζωντανό απόθεμα','Τα αυτοκίνητα ενημερώνονται αυτόματα — πουλήθηκε, φεύγει από το site.'],ru:['Живой каталог','Авто синхронизируются сами — продано сегодня, убрано сегодня.']},
+ {ic:'<path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/>',en:['WhatsApp & Messenger','Buyers reach you where they already are — one tap from any car.'],el:['WhatsApp & Messenger','Οι αγοραστές σας βρίσκουν εκεί που είναι — ένα άγγιγμα από κάθε αυτοκίνητο.'],ru:['WhatsApp и Messenger','Пишут туда, где они уже есть — один тап с любого авто.']},
+ {ic:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 12h.01M15 12h.01M9 16h.01M15 16h.01"/>',en:['Finance & trade-in','Buyers calculate a monthly payment or trade-in value on the spot.'],el:['Χρηματοδότηση & ανταλλαγή','Οι αγοραστές υπολογίζουν δόση ή αξία ανταλλαγής επιτόπου.'],ru:['Финансы и трейд-ин','Покупатель сразу считает платёж или оценку своего авто.']},
+ {ic:'<path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/>',en:['Leads never slip','Every enquiry saved, serious buyers flagged for you.'],el:['Καμία χαμένη επαφή','Κάθε ερώτηση αποθηκεύεται, οι σοβαροί αγοραστές επισημαίνονται.'],ru:['Ни одной упущенной','Каждый запрос сохранён, серьёзные покупатели помечены.']},
+ {ic:'<path d="M3 3v18h18M7 15l4-4 3 3 5-6"/>',en:['Analytics','See which cars buyers want — so you stock what sells.'],el:['Analytics','Δείτε τι θέλουν οι αγοραστές — αποθηκεύετε ό,τι πουλάει.'],ru:['Аналитика','Видно, какие авто ищут — закупаете то, что продаётся.']},
+ {ic:'<path d="M12 3l8 4v5c0 5-3 8-8 9-5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/>',en:['Fast & secure','Loads in under a second, protected like a bank.'],el:['Γρήγορο & ασφαλές','Φορτώνει σε λιγότερο από ένα δευτερόλεπτο, ασφάλεια τραπέζης.'],ru:['Скорость и защита','Грузится меньше секунды, защита банковского уровня.']},
+ {ic:'<path d="M3 17l6-6 4 4 7-8M14 7h5v5"/>',en:['2 years of care','We keep improving it every month — it only gets stronger.'],el:['2 χρόνια φροντίδα','Το βελτιώνουμε κάθε μήνα — γίνεται όλο και δυνατότερο.'],ru:['2 года развития','Каждый месяц улучшаем — становится только сильнее.']}
+];
+const LANDINGS=[
+ {img:'car1.jpg',url:'apollonmotors.cy/range-rover-limassol',en:'Used Range Rover · Limassol',el:'Μεταχειρισμένο Range Rover · Λεμεσός',ru:'Range Rover б/у · Лимасол'},
+ {img:'car4.jpg',url:'apollonmotors.cy/hybrid-cars-cyprus',en:'Hybrid cars · Cyprus',el:'Υβριδικά αυτοκίνητα · Κύπρος',ru:'Гибриды · Кипр'},
+ {img:'car6.jpg',url:'apollonmotors.cy/japan-import-nicosia',en:'Japanese imports · Nicosia',el:'Εισαγωγές Ιαπωνίας · Λευκωσία',ru:'Импорт из Японии · Никосия'},
+ {img:'car5.jpg',url:'apollonmotors.cy/family-suv-larnaca',en:'Family SUV · Larnaca',el:'Οικογενειακό SUV · Λάρνακα',ru:'Семейный SUV · Ларнака'},
+ {img:'car2.jpg',url:'apollonmotors.cy/luxury-cars-paphos',en:'Luxury cars · Paphos',el:'Πολυτελή αυτοκίνητα · Πάφος',ru:'Люкс авто · Пафос'},
+ {img:'car4.jpg',url:'apollonmotors.cy/lexus-hybrid-cyprus',en:'Lexus hybrid · Cyprus',el:'Lexus υβριδικό · Κύπρος',ru:'Lexus гибрид · Кипр'},
+ {img:'car3.jpg',url:'apollonmotors.cy/porsche-limassol',en:'Porsche · Limassol',el:'Porsche · Λεμεσός',ru:'Porsche · Лимасол'},
+ {img:'car2.jpg',url:'apollonmotors.cy/car-finance-cyprus',en:'Car finance · Cyprus',el:'Χρηματοδότηση · Κύπρος',ru:'Автокредит · Кипр'},
+ {img:'car6.jpg',url:'apollonmotors.cy/rhd-import-japan',en:'RHD import from Japan',el:'Εισαγωγή δεξιοτίμονου · Ιαπωνία',ru:'Правый руль из Японии'},
+ {img:'car1.jpg',url:'apollonmotors.cy/electric-hybrid-cyprus',en:'Electric & hybrid · Cyprus',el:'Ηλεκτρικά & υβριδικά · Κύπρος',ru:'Электро и гибрид · Кипр'}
+];
+function renderExtras(){
+ const l=L(),s=SEC[l];
+ ['incl_eye','incl_h','incl_p','found_eye','found_h','found_p'].forEach(k=>{const e=document.getElementById(k);if(e)e.innerHTML=s[k];});
+ const al=document.getElementById('anchor_line');if(al)al.innerHTML=s.anchor;
+ document.getElementById('feat-grid').innerHTML=FEATURES.map(f=>`<div class="feat reveal"><div class="fic"><svg class="ic" viewBox="0 0 24 24">${f.ic}</svg></div><h4>${f[l][0]}</h4><p>${f[l][1]}</p></div>`).join('');
+ const sub=l==='el'?'Google + AI αναζήτηση':l==='ru'?'Google + AI-поиск':'Google + AI search';
+ document.getElementById('land-grid').innerHTML=LANDINGS.map(p=>`<div class="land reveal"><div class="bar"><i></i><i></i><i></i><span class="url">${p.url}</span></div><div class="thumb"><span class="rank">Google #1</span><img src="images/${p.img}" loading="lazy" alt=""></div><div class="lt"><h5>${p[l]}</h5><span>${sub}</span></div></div>`).join('');
+ observe();
+}
 function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));}
 addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>10));
-renderGrid();renderChips();observe();
+renderGrid();renderChips();renderExtras();observe();
 </script>
 </body>
 </html>
