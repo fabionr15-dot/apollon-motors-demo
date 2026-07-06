@@ -3,435 +3,412 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apollon Motors — Premium Cars, Cyprus</title>
-<meta name="description" content="Apollon Motors — premium used & new cars in Cyprus. Ask our AI assistant anything, 24/7, in your language.">
+<title>Apollon Motors — Private Automotive Showroom · Limassol, Cyprus</title>
+<meta name="description" content="Apollon Motors — a private automotive showroom in Limassol. Hand-picked luxury cars, imported RHD from Japan & the UK. Concierge assistant, 24/7, in your language.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0B0C0E; --bg2:#141519; --card:#16181D; --line:#26282E;
-  --ink:#EDEBE6; --muted:#9A9CA3; --gold:#C7A46C; --gold-soft:#e0c391;
-  --sans:'Inter',system-ui,sans-serif; --disp:'Space Grotesk',var(--sans);
-  --r:16px; --max:1180px;
+  --bg:#09090A; --bg2:#0F0F11; --card:#121214; --line:#242426; --line2:#333335;
+  --ink:#F1EFEA; --muted:#8C8C90; --gold:#C9A96A; --gold-soft:#E4CE9E;
+  --sans:'Inter',system-ui,sans-serif; --serif:'Cormorant Garamond',Georgia,serif;
+  --max:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.disp{font-family:var(--disp);letter-spacing:-.02em;line-height:1.05}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.serif{font-family:var(--serif);font-weight:500;letter-spacing:.005em;line-height:1.08}
+.label{font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.ic{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 
-/* top ribbon */
-.ribbon{background:linear-gradient(90deg,#1a1c22,#111216);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center;padding:7px 16px}
-.ribbon b{color:var(--gold-soft);font-weight:600}
-.ribbon a{color:var(--gold);border-bottom:1px solid rgba(199,164,108,.4)}
+/* ribbon */
+.ribbon{background:#050506;border-bottom:1px solid var(--line);font-size:11.5px;letter-spacing:.04em;color:var(--muted);text-align:center;padding:8px 16px}
+.ribbon b{color:var(--gold-soft);font-weight:500}
+.ribbon a{color:var(--gold);border-bottom:1px solid rgba(201,169,106,.35)}
 
 /* nav */
-nav{position:sticky;top:0;z-index:50;background:rgba(11,12,14,.72);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:.3s}
-nav.scrolled{border-bottom:1px solid var(--line);background:rgba(11,12,14,.9)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
-.logo .mark{width:26px;height:26px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:13px}
-.logo b{color:var(--gold)}
-.nav-links{display:flex;gap:30px;font-size:14.5px;color:var(--muted)}
-.nav-links a:hover{color:var(--ink)}
-.nav-right{display:flex;align-items:center;gap:18px}
-.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px}
-.lang button{background:none;border:0;color:var(--muted);font:inherit;font-size:12.5px;padding:4px 10px;border-radius:999px;cursor:pointer;transition:.2s}
-.lang button.on{background:var(--gold);color:#1a1204;font-weight:600}
-.btn{font-family:var(--sans);font-weight:600;font-size:14px;border-radius:999px;padding:11px 20px;cursor:pointer;border:0;transition:.2s;display:inline-flex;align-items:center;gap:8px}
-.btn-gold{background:var(--gold);color:#1a1204}
-.btn-gold:hover{background:var(--gold-soft);transform:translateY(-1px)}
-.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-@media(max-width:860px){.nav-links{display:none}}
+nav{position:sticky;top:0;z-index:50;background:rgba(9,9,10,.7);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.35s}
+nav.scrolled{border-bottom:1px solid var(--line);background:rgba(9,9,10,.92)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:.06em}
+.logo .mark{width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:15px;font-family:var(--serif)}
+.logo .sep{color:var(--gold);font-weight:400}
+.nav-links{display:flex;gap:34px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.nav-links a{transition:.2s}.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:20px}
+.lang{display:flex;gap:0}
+.lang button{background:none;border:0;color:var(--muted);font:inherit;font-size:12px;letter-spacing:.08em;padding:4px 9px;cursor:pointer;transition:.2s;border-bottom:1px solid transparent}
+.lang button.on{color:var(--gold);border-bottom-color:var(--gold)}
+.btn{font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:13px 24px;cursor:pointer;border:0;transition:.25s;display:inline-flex;align-items:center;gap:9px}
+.btn-gold{background:var(--gold);color:#141007}
+.btn-gold:hover{background:var(--gold-soft)}
+.btn-ghost{background:transparent;border:1px solid var(--line2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+@media(max-width:900px){.nav-links{display:none}}
 
 /* hero */
-.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.02)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,.15) 35%,rgba(11,12,14,.85) 100%)}
-.hero-c{position:relative;z-index:2;padding:0 0 64px}
-.eyebrow{font-family:var(--disp);font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:18px}
-.hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(34px,6vw,68px);max-width:16ch;margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--gold)}
-.hero p{font-size:clamp(16px,2vw,20px);color:#d6d4cf;max-width:52ch;margin-bottom:30px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.stats{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
-.stat b{font-family:var(--disp);font-size:30px;color:var(--ink);display:block}
-.stat span{font-size:13px;color:var(--muted);letter-spacing:.02em}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03) brightness(.92)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,10,.6) 0%,rgba(9,9,10,.08) 40%,rgba(9,9,10,.92) 100%)}
+.hero-c{position:relative;z-index:2;padding:0 0 76px;max-width:760px}
+.hero .label{margin-bottom:26px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,7vw,82px);letter-spacing:.01em;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero p{font-size:clamp(16px,1.6vw,19px);color:#cfcdc7;max-width:50ch;margin-bottom:34px;font-weight:400}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.stats{display:flex;gap:52px;margin-top:56px;flex-wrap:wrap}
+.stat b{font-family:var(--serif);font-size:40px;font-weight:500;color:var(--ink);display:block;line-height:1}
+.stat span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block}
+
+/* import trust band */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.trust-in{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:26px 0;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13.5px;letter-spacing:.02em}
+.trust-item .ic{color:var(--gold);width:22px;height:22px}
 
 /* sections */
-section{padding:96px 0}
-.sec-head{margin-bottom:44px}
-.sec-head .eyebrow{margin-bottom:12px}
-.sec-head h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,40px)}
-.sec-head p{color:var(--muted);max-width:56ch;margin-top:12px}
+section{padding:110px 0}
+.sec-head{margin-bottom:56px;max-width:640px}
+.sec-head .label{margin-bottom:16px;display:block}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5vw,52px)}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:16px}
 
 /* inventory */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
-.car{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
-.car:hover{transform:translateY(-4px);border-color:#3a3d45;box-shadow:0 24px 50px -24px rgba(0,0,0,.7)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:940px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.car{background:var(--card);border:1px solid var(--line);overflow:hidden;transition:.4s;display:flex;flex-direction:column}
+.car:hover{transform:translateY(-5px);border-color:var(--line2);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
 .car-img{position:relative;aspect-ratio:4/3;overflow:hidden}
-.car-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
-.car:hover .car-img img{transform:scale(1.05)}
-.tag{position:absolute;top:12px;left:12px;background:rgba(199,164,108,.92);color:#1a1204;font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 10px;border-radius:999px;text-transform:uppercase}
-.car-b{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column}
-.car-b h3{font-family:var(--disp);font-size:18px;font-weight:600;margin-bottom:6px}
-.specs{display:flex;gap:14px;color:var(--muted);font-size:13px;margin-bottom:14px;flex-wrap:wrap}
-.specs span{display:flex;align-items:center;gap:5px}
-.car-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.price{font-family:var(--disp);font-size:22px;font-weight:600;color:var(--ink)}
-.ask{font-size:13px;font-weight:600;color:var(--gold);background:none;border:1px solid var(--line);border-radius:999px;padding:8px 13px;cursor:pointer;transition:.2s;white-space:nowrap}
-.ask:hover{border-color:var(--gold);background:rgba(199,164,108,.08)}
+.car-img img{width:100%;height:100%;object-fit:cover;transition:.6s;filter:brightness(.96)}
+.car:hover .car-img img{transform:scale(1.06)}
+.tag{position:absolute;top:14px;left:14px;background:rgba(9,9,10,.75);backdrop-filter:blur(6px);border:1px solid var(--gold);color:var(--gold-soft);font-size:10px;font-weight:500;letter-spacing:.12em;padding:6px 11px;text-transform:uppercase}
+.car-b{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
+.car-b h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:4px}
+.origin{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.specs{display:flex;gap:18px;color:var(--muted);font-size:13px;margin-bottom:20px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--line)}
+.car-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.price{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--ink)}
+.ask{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--gold-soft);background:none;border:1px solid var(--line2);padding:11px 16px;cursor:pointer;transition:.25s;white-space:nowrap}
+.ask:hover{border-color:var(--gold);background:rgba(201,169,106,.06)}
+
+/* assistant band */
+.band{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band-in{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:920px){.band-in{grid-template-columns:1fr;gap:44px}}
+.chat-demo{background:var(--bg);border:1px solid var(--line);padding:24px;box-shadow:0 40px 90px -40px rgba(0,0,0,.85)}
+.cd-head{display:flex;align-items:center;gap:13px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.cd-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6d3a);display:grid;place-items:center;color:#141007;font-weight:600;font-family:var(--serif);font-size:20px}
+.cd-head b{display:block;font-family:var(--serif);font-size:18px;font-weight:600}
+.cd-head span{font-size:11.5px;letter-spacing:.05em;color:#6fbf88;display:flex;align-items:center;gap:6px}
+.online{width:6px;height:6px;border-radius:50%;background:#6fbf88;display:inline-block}
+.bubble{max-width:84%;padding:12px 16px;font-size:14.5px;margin-bottom:11px;line-height:1.55}
+.b-bot{background:var(--card);border:1px solid var(--line)}
+.b-user{background:var(--gold);color:#141007;margin-left:auto;font-weight:500}
+.mini-v{display:flex;gap:26px;margin-top:26px}
+.mini-v .mv{display:flex;gap:11px;align-items:flex-start}
+.mini-v .ic{color:var(--gold);flex-shrink:0;margin-top:2px}
+.mini-v b{font-family:var(--serif);font-size:17px;font-weight:600;display:block}
+.mini-v span{font-size:13px;color:var(--muted)}
 
 /* value strip */
-.value{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
-@media(max-width:800px){.vgrid{grid-template-columns:repeat(2,1fr)}}
-.vitem .vic{width:44px;height:44px;border-radius:12px;background:rgba(199,164,108,.12);color:var(--gold);display:grid;place-items:center;margin-bottom:14px}
-.vitem h4{font-family:var(--disp);font-size:17px;margin-bottom:7px}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+@media(max-width:820px){.vgrid{grid-template-columns:repeat(2,1fr);gap:32px}}
+.vitem .vic{width:46px;height:46px;border:1px solid var(--line2);border-radius:50%;color:var(--gold);display:grid;place-items:center;margin-bottom:18px}
+.vitem h4{font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:8px}
 .vitem p{color:var(--muted);font-size:14px}
 
-/* assistant showcase band */
-.assistant-band{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-@media(max-width:900px){.assistant-band{grid-template-columns:1fr;gap:36px}}
-.chat-demo{background:linear-gradient(180deg,#15171c,#101216);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
-.cd-head{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:16px}
-.cd-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6d3a);display:grid;place-items:center;color:#1a1204;font-weight:700;font-family:var(--disp)}
-.cd-head b{display:block;font-family:var(--disp);font-size:15px}
-.cd-head span{font-size:12px;color:#5fbf7a}
-.cd-head .dot{width:7px;height:7px;border-radius:50%;background:#5fbf7a;display:inline-block;margin-right:5px}
-.bubble{max-width:82%;padding:11px 15px;border-radius:16px;font-size:14.5px;margin-bottom:10px;line-height:1.5}
-.b-bot{background:#20232a;border:1px solid var(--line);border-top-left-radius:5px}
-.b-user{background:var(--gold);color:#1a1204;margin-left:auto;border-top-right-radius:5px;font-weight:500}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.info-row{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.info-row .ic{color:var(--gold);flex-shrink:0;margin-top:3px}
+.info-row b{font-family:var(--serif);font-size:16px;font-weight:600;display:block}
+.info-row span{color:var(--muted);font-size:14px}
+.mapbox{aspect-ratio:1/1;border:1px solid var(--line);background:linear-gradient(135deg,#141416,#0b0b0d);position:relative;overflow:hidden;display:grid;place-items:center}
+.mapbox svg.grid-svg{opacity:.35;position:absolute;inset:0;width:100%;height:100%}
+.mapbox .pin{position:relative;z-index:2;text-align:center;color:var(--gold-soft)}
+.mapbox .pin .ic{width:30px;height:30px;color:var(--gold);margin:0 auto 8px}
+.mapbox .pin b{font-family:var(--serif);font-size:22px}
 
 /* floating assistant */
-.fab{position:fixed;bottom:24px;right:24px;z-index:80;width:60px;height:60px;border-radius:50%;background:var(--gold);color:#1a1204;border:0;cursor:pointer;box-shadow:0 14px 34px -8px rgba(199,164,108,.6);display:grid;place-items:center;transition:.25s}
-.fab:hover{transform:scale(1.06)}
-.fab svg{width:26px;height:26px}
-.panel{position:fixed;bottom:96px;right:24px;z-index:80;width:min(390px,calc(100vw - 32px));height:min(560px,70vh);background:var(--bg2);border:1px solid var(--line);border-radius:20px;box-shadow:0 40px 90px -30px rgba(0,0,0,.85);display:flex;flex-direction:column;overflow:hidden;transform:translateY(20px) scale(.96);opacity:0;pointer-events:none;transition:.28s cubic-bezier(.2,.8,.2,1)}
+.fab{position:fixed;bottom:26px;right:26px;z-index:80;width:62px;height:62px;border-radius:50%;background:var(--gold);color:#141007;border:0;cursor:pointer;box-shadow:0 16px 40px -10px rgba(201,169,106,.55);display:grid;place-items:center;transition:.25s}
+.fab:hover{transform:scale(1.05)}
+.fab .ic{width:26px;height:26px;stroke-width:1.6}
+.panel{position:fixed;bottom:100px;right:26px;z-index:80;width:min(400px,calc(100vw - 36px));height:min(580px,72vh);background:var(--bg2);border:1px solid var(--line2);box-shadow:0 40px 90px -30px rgba(0,0,0,.9);display:flex;flex-direction:column;overflow:hidden;transform:translateY(20px) scale(.97);opacity:0;pointer-events:none;transition:.3s cubic-bezier(.2,.8,.2,1)}
 .panel.open{transform:none;opacity:1;pointer-events:auto}
-.p-head{background:linear-gradient(135deg,#1b1e24,#141519);padding:16px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
-.p-head .cd-av{width:38px;height:38px}
-.p-head b{font-family:var(--disp);font-size:15px}
-.p-head span{font-size:12px;color:#5fbf7a}
-.p-close{margin-left:auto;background:none;border:0;color:var(--muted);cursor:pointer;font-size:20px;line-height:1}
-.p-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column}
-.p-body::-webkit-scrollbar{width:6px}.p-body::-webkit-scrollbar-thumb{background:#2c2f36;border-radius:6px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}
-.chip{background:rgba(199,164,108,.1);border:1px solid rgba(199,164,108,.3);color:var(--gold-soft);font:inherit;font-size:12.5px;padding:7px 12px;border-radius:999px;cursor:pointer;transition:.2s}
-.chip:hover{background:rgba(199,164,108,.2)}
-.p-input{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}
-.p-input input{flex:1;background:#0f1013;border:1px solid var(--line);border-radius:999px;color:var(--ink);font:inherit;font-size:14px;padding:10px 16px;outline:none}
+.p-head{background:var(--bg);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
+.p-head b{font-family:var(--serif);font-size:17px;font-weight:600}
+.p-head span{font-size:11.5px;color:#6fbf88;display:flex;align-items:center;gap:6px}
+.p-close{margin-left:auto;background:none;border:0;color:var(--muted);cursor:pointer}
+.p-body{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column}
+.p-body::-webkit-scrollbar{width:5px}.p-body::-webkit-scrollbar-thumb{background:#2c2c2e}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;border-top:1px solid var(--line)}
+.chip{background:none;border:1px solid var(--line2);color:var(--gold-soft);font:inherit;font-size:12px;padding:8px 13px;cursor:pointer;transition:.2s;letter-spacing:.02em}
+.chip:hover{border-color:var(--gold);background:rgba(201,169,106,.06)}
+.p-input{display:flex;gap:9px;padding:14px 16px;border-top:1px solid var(--line)}
+.p-input input{flex:1;background:var(--bg);border:1px solid var(--line2);color:var(--ink);font:inherit;font-size:14px;padding:11px 16px;outline:none}
 .p-input input:focus{border-color:var(--gold)}
-.p-input button{background:var(--gold);border:0;border-radius:50%;width:40px;height:40px;cursor:pointer;color:#1a1204;display:grid;place-items:center;flex-shrink:0}
-.typing{display:flex;gap:4px;padding:12px 15px;background:#20232a;border:1px solid var(--line);border-radius:16px;border-top-left-radius:5px;width:fit-content;margin-bottom:10px}
-.typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:bl 1.2s infinite}
+.p-input button{background:var(--gold);border:0;width:42px;height:42px;cursor:pointer;color:#141007;display:grid;place-items:center;flex-shrink:0}
+.typing{display:flex;gap:4px;padding:13px 16px;background:var(--card);border:1px solid var(--line);width:fit-content;margin-bottom:11px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:bl 1.2s infinite}
 .typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
 @keyframes bl{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
 
-/* contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
-@media(max-width:800px){.contact-grid{grid-template-columns:1fr}}
-.info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
-.info-row .ic{color:var(--gold);flex-shrink:0}
-.info-row b{font-family:var(--disp);display:block;font-size:14px}
-.info-row span{color:var(--muted);font-size:14px}
-.mapbox{aspect-ratio:4/3;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(135deg,#15171c,#0e0f12);position:relative;overflow:hidden;display:grid;place-items:center}
-.mapbox .pin{color:var(--gold);text-align:center}
-.mapbox svg{opacity:.5;position:absolute;inset:0;width:100%;height:100%}
-
 /* footer */
-footer{background:#08090b;border-top:1px solid var(--line);padding:56px 0 30px}
-.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:36px}
-.foot-demo{background:linear-gradient(120deg,rgba(199,164,108,.1),rgba(199,164,108,.02));border:1px solid rgba(199,164,108,.25);border-radius:var(--r);padding:22px 26px;margin-bottom:34px}
-.foot-demo h4{font-family:var(--disp);font-size:17px;margin-bottom:6px;color:var(--gold-soft)}
+footer{background:#050506;border-top:1px solid var(--line);padding:64px 0 34px}
+.foot-demo{border:1px solid rgba(201,169,106,.28);padding:26px 30px;margin-bottom:40px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.foot-demo .ic{color:var(--gold);width:30px;height:30px;flex-shrink:0}
+.foot-demo h4{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--gold-soft);margin-bottom:4px}
 .foot-demo p{color:var(--muted);font-size:14px}
-.foot-demo a{color:var(--gold);font-weight:600}
-.foot-bottom{color:#63666e;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+.foot-demo a{color:var(--gold);font-weight:500}
+.foot-top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.foot-bottom{color:#5a5a5e;font-size:12.5px;letter-spacing:.03em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
-/* reveal */
-.reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<div class="ribbon">◆ <b>Live demo built by Domani AI</b> — in the style of a global brand. Your logo, your cars, your languages. <a href="https://domaniai.com" target="_blank">domaniai.com</a></div>
+<div class="ribbon">Live demo built by <b>Domani AI</b> — in the style of a global marque. Your name, your cars, your languages. <a href="https://domaniai.com" target="_blank">domaniai.com</a></div>
 
-<nav id="nav">
-  <div class="wrap nav-in">
-    <div class="logo"><span class="mark">A</span>APOLLON<b>·</b>MOTORS</div>
-    <div class="nav-links">
-      <a href="#inventory" data-i="nav_inv">Inventory</a>
-      <a href="#why" data-i="nav_why">Why us</a>
-      <a href="#contact" data-i="nav_contact">Contact</a>
-    </div>
-    <div class="nav-right">
-      <div class="lang">
-        <button data-lang="en" class="on">EN</button>
-        <button data-lang="el">ΕΛ</button>
-        <button data-lang="ru">РУ</button>
-      </div>
-      <button class="btn btn-gold" onclick="openChat()" data-i="nav_ask">Ask the assistant</button>
-    </div>
+<nav id="nav"><div class="wrap nav-in">
+  <div class="logo"><span class="mark">A</span>APOLLON <span class="sep">·</span> MOTORS</div>
+  <div class="nav-links">
+    <a href="#inventory" data-i="nav_inv">Collection</a>
+    <a href="#import" data-i="nav_imp">Import</a>
+    <a href="#contact" data-i="nav_contact">Visit</a>
   </div>
-</nav>
+  <div class="nav-right">
+    <div class="lang"><button data-lang="en" class="on">EN</button><button data-lang="el">ΕΛ</button><button data-lang="ru">РУ</button></div>
+    <button class="btn btn-gold" onclick="openChat()" data-i="nav_ask">Concierge</button>
+  </div>
+</div></nav>
 
 <header class="hero">
-  <img src="images/hero.jpg" alt="Apollon Motors showroom">
+  <img src="images/hero.jpg" alt="Apollon Motors private showroom">
   <div class="wrap hero-c">
-    <div class="eyebrow" data-i="hero_eye">Premium cars · Cyprus · since 1998</div>
-    <h1 class="disp" data-i="hero_h1">Every car. Every question. <em>Answered in seconds — 24/7.</em></h1>
-    <p data-i="hero_p">Browse our showroom, or just ask. Our assistant knows every car we have and replies instantly — in your language, day or night.</p>
+    <div class="label" data-i="hero_eye">Private Showroom · Limassol · Est. 1998</div>
+    <h1 class="serif" data-i="hero_h1">The car you want, <em>answered before you ask.</em></h1>
+    <p data-i="hero_p">A curated collection of luxury cars — imported right-hand-drive from Japan and the United Kingdom, prepared and registered in Cyprus. Our concierge replies day or night, in Greek, English or Russian.</p>
     <div class="hero-cta">
-      <a href="#inventory" class="btn btn-gold" data-i="hero_cta1">Browse inventory</a>
-      <button class="btn btn-ghost" onclick="openChat()" data-i="hero_cta2">💬 Ask the assistant</button>
+      <a href="#inventory" class="btn btn-gold" data-i="hero_cta1">View the collection</a>
+      <button class="btn btn-ghost" onclick="openChat()" data-i="hero_cta2">Speak to the concierge</button>
     </div>
     <div class="stats">
-      <div class="stat"><b>60+</b><span data-i="stat1">cars in stock</span></div>
-      <div class="stat"><b>3</b><span data-i="stat2">languages, instantly</span></div>
-      <div class="stat"><b>24/7</b><span data-i="stat3">answers, even at night</span></div>
+      <div class="stat"><b>1998</b><span data-i="stat1">Serving Cyprus</span></div>
+      <div class="stat"><b>3</b><span data-i="stat2">Languages, instantly</span></div>
+      <div class="stat"><b>24/7</b><span data-i="stat3">Concierge, even at night</span></div>
     </div>
   </div>
 </header>
 
-<!-- inventory -->
+<div class="trust"><div class="wrap trust-in">
+  <div class="trust-item"><svg class="ic" viewBox="0 0 24 24"><path d="M3 17h18M5 17l1-6h12l1 6M7 11V8a5 5 0 0 1 10 0v3"/></svg><span data-i="t1">Imported from Japan &amp; the UK</span></div>
+  <div class="trust-item"><svg class="ic" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7z"/></svg><span data-i="t2">Customs &amp; registration handled</span></div>
+  <div class="trust-item"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2v20M4 7l8 4 8-4M4 7v10l8 4 8-4V7"/></svg><span data-i="t3">Road tax &amp; transfer included</span></div>
+  <div class="trust-item"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3 8-8 9-5-1-8-4-8-9V7z"/></svg><span data-i="t4">Every car inspected &amp; guaranteed</span></div>
+</div></div>
+
 <section id="inventory">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow" data-i="inv_eye">The showroom</div>
-      <h2 data-i="inv_h">Latest arrivals</h2>
-      <p data-i="inv_p">A selection from our stock. Tap “Ask” on any car — the assistant answers in real time.</p>
+      <div class="label" data-i="inv_eye">The Collection</div>
+      <h2 data-i="inv_h">Currently in the showroom</h2>
+      <p data-i="inv_p">A private selection. Ask the concierge about any car — availability, import papers, a viewing — answered in seconds.</p>
     </div>
     <div class="grid" id="grid"></div>
   </div>
 </section>
 
-<!-- assistant band -->
-<section class="value" id="why">
-  <div class="wrap">
-    <div class="assistant-band">
-      <div class="reveal">
-        <div class="eyebrow" data-i="asst_eye">The difference</div>
-        <h2 class="disp" style="font-size:clamp(26px,4vw,38px);margin-bottom:16px" data-i="asst_h">A salesman who never sleeps</h2>
-        <p style="color:var(--muted);margin-bottom:22px" data-i="asst_p">Half your buyers browse in the evening, at the weekend, or from abroad. When no one answers, they go to the next dealer. Our assistant answers every one — instantly, in Greek, English or Russian — and hands you the hot leads in the morning.</p>
-        <div class="vgrid" style="grid-template-columns:1fr 1fr;gap:20px">
-          <div class="vitem"><div class="vic">⚡</div><h4 data-i="v1h">Instant answers</h4><p data-i="v1p">Price, availability, financing — no waiting.</p></div>
-          <div class="vitem"><div class="vic">🌍</div><h4 data-i="v2h">Every language</h4><p data-i="v2p">Greek, English, Russian and more.</p></div>
-        </div>
+<section class="band" id="concierge">
+  <div class="wrap band-in">
+    <div class="reveal">
+      <div class="label" style="margin-bottom:18px" data-i="asst_eye">The Concierge</div>
+      <h2 class="serif" style="font-size:clamp(30px,4.5vw,48px);margin-bottom:20px" data-i="asst_h">A private assistant that never closes</h2>
+      <p style="color:var(--muted);margin-bottom:8px;font-size:16px" data-i="asst_p">Your best buyers browse late — from Limassol, from Moscow, from London. When no one answers, they move on. Our concierge answers every one instantly, in their own language, and books the serious ones for a private viewing.</p>
+      <div class="mini-v">
+        <div class="mv"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg><div><b data-i="v1h">Instant</b><span data-i="v1p">Price, papers, availability — no wait.</span></div></div>
+        <div class="mv"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><div><b data-i="v2h">Multilingual</b><span data-i="v2p">Greek · English · Russian.</span></div></div>
       </div>
-      <div class="chat-demo reveal">
-        <div class="cd-head"><div class="cd-av">A</div><div><b>Apollon Assistant</b><span><i class="dot"></i>online now</span></div></div>
-        <div class="bubble b-user" data-i="demo_u1">Do you have a hybrid under €20,000?</div>
-        <div class="bubble b-bot" data-i="demo_b1">Yes — right now we have a 2021 <b>Toyota Yaris Hybrid</b> at <b>€18,900</b> (46,000 km, full service history). Would you like more photos or a test drive?</div>
-        <div class="bubble b-user" data-i="demo_u2">Can I see it Saturday?</div>
-        <div class="bubble b-bot" data-i="demo_b2">Absolutely. I'll hold it for you and have it ready at our Limassol showroom on Saturday. What time suits you? 🚗</div>
-      </div>
+    </div>
+    <div class="chat-demo reveal">
+      <div class="cd-head"><div class="cd-av">A</div><div><b>Apollon Concierge</b><span><i class="online"></i><span data-i="online">online now</span></span></div></div>
+      <div class="bubble b-user" data-i="demo_u1">Is the Range Rover still available? Can you handle registration?</div>
+      <div class="bubble b-bot" data-i="demo_b1">Yes — the 2023 <b>Range Rover Sport</b> is available, <b>€82,500</b>. A UK import, right-hand drive. We handle customs, registration and road tax for you. Shall I arrange a private viewing in Limassol?</div>
+      <div class="bubble b-user" data-i="demo_u2">Да, в субботу?</div>
+      <div class="bubble b-bot" data-i="demo_b2">С удовольствием. Я подготовлю автомобиль к субботе в нашем салоне в Лимасоле. В какое время вам удобно?</div>
     </div>
   </div>
 </section>
 
-<!-- value strip -->
-<section style="padding:70px 0">
+<section id="import">
   <div class="wrap">
     <div class="vgrid">
-      <div class="vitem reveal"><div class="vic">🕑</div><h4 data-i="s1h">24/7 replies</h4><p data-i="s1p">Never lose an evening or weekend enquiry again.</p></div>
-      <div class="vitem reveal"><div class="vic">🔑</div><h4 data-i="s2h">Trade-in</h4><p data-i="s2p">Instant estimate, confirmed in person.</p></div>
-      <div class="vitem reveal"><div class="vic">📄</div><h4 data-i="s3h">Financing</h4><p data-i="s3p">From 3.9% APR, calculated on the spot.</p></div>
-      <div class="vitem reveal"><div class="vic">🛡️</div><h4 data-i="s4h">Warranty</h4><p data-i="s4p">Every car checked & guaranteed.</p></div>
+      <div class="vitem reveal"><div class="vic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h4 data-i="s1h">24/7 concierge</h4><p data-i="s1p">Never lose a late-night or overseas enquiry again.</p></div>
+      <div class="vitem reveal"><div class="vic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 17h18M5 17l1-6h12l1 6M7 11V8a5 5 0 0 1 10 0v3"/></svg></div><h4 data-i="s2h">RHD imports</h4><p data-i="s2p">Sourced from Japan &amp; the UK, prepared in Cyprus.</p></div>
+      <div class="vitem reveal"><div class="vic"><svg class="ic" viewBox="0 0 24 24"><path d="M4 4h12l4 4v12H4zM8 4v6h8"/></svg></div><h4 data-i="s3h">Papers handled</h4><p data-i="s3p">Customs, registration, road tax and transfer.</p></div>
+      <div class="vitem reveal"><div class="vic"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3 8-8 9-5-1-8-4-8-9V7z"/></svg></div><h4 data-i="s4h">Guaranteed</h4><p data-i="s4p">Inspected, warranted, history verified.</p></div>
     </div>
   </div>
 </section>
 
-<!-- contact -->
-<section id="contact" style="background:var(--bg2);border-top:1px solid var(--line)">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="reveal">
-        <div class="eyebrow" data-i="c_eye">Visit us</div>
-        <h2 class="disp" style="font-size:clamp(26px,4vw,38px);margin-bottom:20px" data-i="c_h">Come see the cars</h2>
-        <div class="info-row"><span class="ic">📍</span><div><b data-i="c_addr">Showroom</b><span>Leoforos Makariou 210, Limassol 3030, Cyprus</span></div></div>
-        <div class="info-row"><span class="ic">📞</span><div><b data-i="c_phone">Phone / WhatsApp</b><span>+357 25 000 000</span></div></div>
-        <div class="info-row"><span class="ic">🕘</span><div><b data-i="c_hours">Hours</b><span data-i="c_hours_v">Mon–Fri 09:00–19:00 · Sat 09:00–14:00</span></div></div>
-        <button class="btn btn-gold" style="margin-top:24px" onclick="openChat()" data-i="c_cta">💬 Ask us anything</button>
-      </div>
-      <div class="mapbox reveal">
-        <svg viewBox="0 0 400 300"><g stroke="#2a2d34" fill="none" stroke-width="1"><path d="M0 60 H400 M0 140 H400 M0 220 H400 M80 0 V300 M180 0 V300 M280 0 V300"/></g></svg>
-        <div class="pin" style="position:relative;z-index:2"><div style="font-size:34px">📍</div><b class="disp">Limassol</b></div>
-      </div>
+<section id="contact" class="band">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="label" data-i="c_eye">By Appointment</div>
+      <h2 class="serif" style="font-size:clamp(30px,4.5vw,48px);margin:16px 0 24px" data-i="c_h">Visit the showroom</h2>
+      <div class="info-row"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b data-i="c_addr">Showroom</b><span>Amathountos Avenue 88, Limassol Marina district, 4532 Cyprus</span></div></div>
+      <div class="info-row"><svg class="ic" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><b data-i="c_phone">Telephone · WhatsApp</b><span>+357 25 000 000</span></div></div>
+      <div class="info-row"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b data-i="c_hours">Hours</b><span data-i="c_hours_v">Mon–Fri 09:00–19:00 · Sat by appointment</span></div></div>
+      <button class="btn btn-gold" style="margin-top:26px" onclick="openChat()" data-i="c_cta">Ask the concierge</button>
+    </div>
+    <div class="mapbox reveal">
+      <svg class="grid-svg" viewBox="0 0 400 400"><g stroke="#2a2a2c" fill="none" stroke-width="1"><path d="M0 80 H400 M0 180 H400 M0 280 H400 M100 0 V400 M220 0 V400 M320 0 V400"/></g><path d="M0 300 Q200 260 400 320 L400 400 L0 400 Z" fill="#0d1418" opacity=".7"/></svg>
+      <div class="pin"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><b class="serif">Limassol Marina</b></div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div class="foot-demo">
-      <h4 data-i="fd_h">◆ This is a demo — imagine it as your dealership</h4>
-      <p data-i="fd_p">This whole site, the 24/7 multilingual assistant and two years of optimisation were built by <b>Domani AI</b>. Your name, your logo, your cars. → <a href="https://domaniai.com" target="_blank">domaniai.com</a></p>
-    </div>
-    <div class="foot-top">
-      <div class="logo"><span class="mark">A</span>APOLLON<b style="color:var(--gold)">·</b>MOTORS</div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Apollon Motors (demo) · Limassol, Cyprus</span>
-      <span data-i="foot_by">Built by Domani AI</span>
-    </div>
+<footer><div class="wrap">
+  <div class="foot-demo">
+    <svg class="ic" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.5 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>
+    <div><h4 data-i="fd_h">This is a demonstration — imagine it as your marque</h4>
+    <p data-i="fd_p">The site, the 24/7 multilingual concierge and two years of optimisation are built by <b>Domani AI</b>. Your name, your logo, your collection. → <a href="https://domaniai.com" target="_blank">domaniai.com</a></p></div>
   </div>
-</footer>
+  <div class="foot-top">
+    <div class="logo"><span class="mark">A</span>APOLLON <span class="sep">·</span> MOTORS</div>
+    <span class="label" data-i="foot_by">Crafted by Domani AI</span>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Apollon Motors (demonstration) · Limassol, Cyprus</span><span>Private showroom · by appointment</span></div>
+</div></footer>
 
-<button class="fab" onclick="toggleChat()" aria-label="Chat">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-</button>
+<button class="fab" onclick="toggleChat()" aria-label="Concierge"><svg class="ic" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg></button>
 
 <div class="panel" id="panel">
-  <div class="p-head"><div class="cd-av">A</div><div><b>Apollon Assistant</b><span><i class="dot" style="width:7px;height:7px;border-radius:50%;background:#5fbf7a;display:inline-block;margin-right:5px"></i>online · replies instantly</span></div><button class="p-close" onclick="toggleChat()">✕</button></div>
+  <div class="p-head"><div class="cd-av">A</div><div><b>Apollon Concierge</b><span><i class="online"></i><span data-i="online2">online · replies instantly</span></span></div><button class="p-close" onclick="toggleChat()"><svg class="ic" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <div class="p-body" id="pbody"></div>
   <div class="chips" id="chips"></div>
-  <div class="p-input"><input id="pin" placeholder="Type a message…" onkeydown="if(event.key==='Enter')send()"><button onclick="send()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button></div>
+  <div class="p-input"><input id="pin" data-i-ph="ph" placeholder="Write to the concierge…" onkeydown="if(event.key==='Enter')send()"><button onclick="send()"><svg class="ic" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button></div>
 </div>
 
 <script>
-/* ---------- inventory ---------- */
 const CARS=[
- {img:'car1.jpg',name:'Range Rover Velar P400e',year:2022,km:'41,000',fuel:'Plug-in Hybrid',price:'€62,900',hybrid:1},
- {img:'car2.jpg',name:'BMW M3 Competition',year:2022,km:'28,500',fuel:'Petrol',price:'€78,400'},
- {img:'car3.jpg',name:'Audi A5 Coupé',year:2021,km:'39,000',fuel:'Petrol',price:'€44,900'},
- {img:'car4.jpg',name:'Toyota Yaris Hybrid',year:2021,km:'46,000',fuel:'Hybrid',price:'€18,900',hybrid:1},
- {img:'car5.jpg',name:'Volkswagen Golf GTE',year:2022,km:'31,000',fuel:'Plug-in Hybrid',price:'€29,900',hybrid:1},
- {img:'car6.jpg',name:'Mercedes-Benz GLC 300e',year:2023,km:'22,000',fuel:'Plug-in Hybrid',price:'€58,700',hybrid:1},
+ {img:'car1.jpg',name:'Range Rover Sport',origin:'UK import · RHD',year:2023,km:'32,000',fuel:'Plug-in Hybrid',price:'€82,500',tag:'Hybrid'},
+ {img:'car2.jpg',name:'Mercedes-Benz S 450',origin:'UK import · RHD',year:2022,km:'38,000',fuel:'Petrol · mild hybrid',price:'€96,900'},
+ {img:'car3.jpg',name:'Porsche Cayenne',origin:'RHD',year:2022,km:'41,000',fuel:'Petrol',price:'€74,900'},
+ {img:'car4.jpg',name:'Lexus RX 450h',origin:'Japan import · RHD',year:2023,km:'24,000',fuel:'Hybrid',price:'€54,900',tag:'Hybrid'},
+ {img:'car5.jpg',name:'BMW X5 xDrive45e',origin:'UK import · RHD',year:2022,km:'35,000',fuel:'Plug-in Hybrid',price:'€68,500',tag:'Hybrid'},
+ {img:'car6.jpg',name:'Lexus LS 500h',origin:'Japan import · RHD',year:2021,km:'46,000',fuel:'Hybrid',price:'€58,900',tag:'Hybrid'},
 ];
 const L=()=>document.documentElement.lang;
 function renderGrid(){
  document.getElementById('grid').innerHTML=CARS.map((c,i)=>`
   <div class="car reveal">
-   <div class="car-img">${c.hybrid?`<span class="tag">${T[L()].hybrid}</span>`:''}<img src="images/${c.img}" alt="${c.name}" loading="lazy"></div>
+   <div class="car-img">${c.tag?`<span class="tag">${T[L()].hybrid}</span>`:''}<img src="images/${c.img}" alt="${c.name}" loading="lazy"></div>
    <div class="car-b">
-    <h3>${c.name}</h3>
-    <div class="specs"><span>📅 ${c.year}</span><span>🛣️ ${c.km} km</span><span>⛽ ${T[L()]['fuel_'+c.fuel]||c.fuel}</span></div>
+    <h3>${c.name}</h3><div class="origin">${T[L()]['o_'+c.origin]||c.origin}</div>
+    <div class="specs"><span>${c.year}</span><span>${c.km} km</span><span>${T[L()]['fuel_'+c.fuel]||c.fuel}</span></div>
     <div class="car-foot"><div class="price">${c.price}</div><button class="ask" onclick="askCar(${i})">${T[L()].ask}</button></div>
    </div>
   </div>`).join('');
  observe();
 }
-
-/* ---------- i18n ---------- */
 const T={
- en:{nav_inv:'Inventory',nav_why:'Why us',nav_contact:'Contact',nav_ask:'Ask the assistant',
-  hero_eye:'Premium cars · Cyprus · since 1998',hero_h1:'Every car. Every question. <em>Answered in seconds — 24/7.</em>',
-  hero_p:'Browse our showroom, or just ask. Our assistant knows every car we have and replies instantly — in your language, day or night.',
-  hero_cta1:'Browse inventory',hero_cta2:'💬 Ask the assistant',stat1:'cars in stock',stat2:'languages, instantly',stat3:'answers, even at night',
-  inv_eye:'The showroom',inv_h:'Latest arrivals',inv_p:'A selection from our stock. Tap “Ask” on any car — the assistant answers in real time.',
-  ask:'Ask →',hybrid:'Hybrid',fuel_Petrol:'Petrol',fuel_Hybrid:'Hybrid','fuel_Plug-in Hybrid':'Plug-in Hybrid',
-  asst_eye:'The difference',asst_h:'A salesman who never sleeps',asst_p:'Half your buyers browse in the evening, at the weekend, or from abroad. When no one answers, they go to the next dealer. Our assistant answers every one — instantly, in Greek, English or Russian — and hands you the hot leads in the morning.',
-  v1h:'Instant answers',v1p:'Price, availability, financing — no waiting.',v2h:'Every language',v2p:'Greek, English, Russian and more.',
-  demo_u1:'Do you have a hybrid under €20,000?',demo_b1:'Yes — right now we have a 2021 <b>Toyota Yaris Hybrid</b> at <b>€18,900</b> (46,000 km, full service history). Would you like more photos or a test drive?',demo_u2:'Can I see it Saturday?',demo_b2:"Absolutely. I'll hold it for you and have it ready at our Limassol showroom on Saturday. What time suits you? 🚗",
-  s1h:'24/7 replies',s1p:'Never lose an evening or weekend enquiry again.',s2h:'Trade-in',s2p:'Instant estimate, confirmed in person.',s3h:'Financing',s3p:'From 3.9% APR, calculated on the spot.',s4h:'Warranty',s4p:'Every car checked & guaranteed.',
-  c_eye:'Visit us',c_h:'Come see the cars',c_addr:'Showroom',c_phone:'Phone / WhatsApp',c_hours:'Hours',c_hours_v:'Mon–Fri 09:00–19:00 · Sat 09:00–14:00',c_cta:'💬 Ask us anything',
-  fd_h:'◆ This is a demo — imagine it as your dealership',fd_p:'This whole site, the 24/7 multilingual assistant and two years of optimisation were built by <b>Domani AI</b>. Your name, your logo, your cars. → <a href="https://domaniai.com" target="_blank">domaniai.com</a>',foot_by:'Built by Domani AI',
-  greet:"Hi! 👋 I'm the Apollon assistant. Ask me about any car, financing, or book a test drive — any time.",
-  chips:['Hybrids under €20k','Book a test drive','Trade-in value','Financing']},
- el:{nav_inv:'Αυτοκίνητα',nav_why:'Γιατί εμείς',nav_contact:'Επικοινωνία',nav_ask:'Ρωτήστε τον βοηθό',
-  hero_eye:'Premium αυτοκίνητα · Κύπρος · από το 1998',hero_h1:'Κάθε αυτοκίνητο. Κάθε ερώτηση. <em>Απάντηση σε δευτερόλεπτα — 24/7.</em>',
-  hero_p:'Δείτε την έκθεσή μας ή απλώς ρωτήστε. Ο βοηθός μας ξέρει κάθε αυτοκίνητο και απαντά άμεσα — στη γλώσσα σας, μέρα ή νύχτα.',
-  hero_cta1:'Δείτε τα αυτοκίνητα',hero_cta2:'💬 Ρωτήστε τον βοηθό',stat1:'αυτοκίνητα σε στοκ',stat2:'γλώσσες, άμεσα',stat3:'απαντήσεις, ακόμα και τη νύχτα',
-  inv_eye:'Η έκθεση',inv_h:'Νέες αφίξεις',inv_p:'Μια επιλογή από το στοκ μας. Πατήστε «Ρωτήστε» — ο βοηθός απαντά σε πραγματικό χρόνο.',
-  ask:'Ρωτήστε →',hybrid:'Υβριδικό',fuel_Petrol:'Βενζίνη',fuel_Hybrid:'Υβριδικό','fuel_Plug-in Hybrid':'Plug-in Υβριδικό',
-  asst_eye:'Η διαφορά',asst_h:'Ένας πωλητής που δεν κοιμάται ποτέ',asst_p:'Οι μισοί αγοραστές ψάχνουν το βράδυ, το σαββατοκύριακο ή από το εξωτερικό. Όταν δεν απαντά κανείς, πάνε στον επόμενο. Ο βοηθός μας απαντά σε όλους — άμεσα, στα Ελληνικά, Αγγλικά ή Ρωσικά.',
-  v1h:'Άμεσες απαντήσεις',v1p:'Τιμή, διαθεσιμότητα, χρηματοδότηση — χωρίς αναμονή.',v2h:'Κάθε γλώσσα',v2p:'Ελληνικά, Αγγλικά, Ρωσικά και άλλα.',
-  demo_u1:'Έχετε υβριδικό κάτω από €20.000;',demo_b1:'Ναι — έχουμε ένα <b>Toyota Yaris Hybrid</b> του 2021 στα <b>€18.900</b> (46.000 χλμ, πλήρες ιστορικό σέρβις). Θέλετε φωτογραφίες ή test drive;',demo_u2:'Μπορώ να το δω το Σάββατο;',demo_b2:'Φυσικά! Θα το κρατήσω για εσάς στην έκθεσή μας στη Λεμεσό το Σάββατο. Τι ώρα σας βολεύει; 🚗',
-  s1h:'Απαντήσεις 24/7',s1p:'Ποτέ ξανά χαμένη ερώτηση το βράδυ ή το σ/κ.',s2h:'Ανταλλαγή',s2p:'Άμεση εκτίμηση, επιβεβαίωση από κοντά.',s3h:'Χρηματοδότηση',s3p:'Από 3,9% ΑΠΕ, υπολογισμός επιτόπου.',s4h:'Εγγύηση',s4p:'Κάθε αυτοκίνητο ελεγμένο & εγγυημένο.',
-  c_eye:'Επισκεφθείτε μας',c_h:'Ελάτε να δείτε τα αυτοκίνητα',c_addr:'Έκθεση',c_phone:'Τηλέφωνο / WhatsApp',c_hours:'Ώρες',c_hours_v:'Δευ–Παρ 09:00–19:00 · Σαβ 09:00–14:00',c_cta:'💬 Ρωτήστε μας',
-  fd_h:'◆ Αυτό είναι demo — φανταστείτε το ως τη δική σας αντιπροσωπεία',fd_p:'Όλο το site, ο πολύγλωσσος βοηθός 24/7 και δύο χρόνια βελτιστοποίησης φτιάχτηκαν από την <b>Domani AI</b>. Το όνομά σας, το λογότυπό σας, τα αυτοκίνητά σας. → <a href="https://domaniai.com" target="_blank">domaniai.com</a>',foot_by:'Κατασκευή από Domani AI',
-  greet:'Γεια σας! 👋 Είμαι ο βοηθός της Apollon. Ρωτήστε με για οποιοδήποτε αυτοκίνητο, χρηματοδότηση ή κλείστε test drive — οποιαδήποτε ώρα.',
-  chips:['Υβριδικά κάτω από €20k','Κλείστε test drive','Αξία ανταλλαγής','Χρηματοδότηση']},
- ru:{nav_inv:'Автомобили',nav_why:'Почему мы',nav_contact:'Контакты',nav_ask:'Спросить ассистента',
-  hero_eye:'Премиум-авто · Кипр · с 1998',hero_h1:'Любой авто. Любой вопрос. <em>Ответ за секунды — 24/7.</em>',
-  hero_p:'Смотрите наш салон или просто спросите. Ассистент знает каждую машину и отвечает мгновенно — на вашем языке, днём и ночью.',
-  hero_cta1:'Смотреть авто',hero_cta2:'💬 Спросить ассистента',stat1:'авто в наличии',stat2:'языка, мгновенно',stat3:'ответы даже ночью',
-  inv_eye:'Салон',inv_h:'Новые поступления',inv_p:'Выбор из нашего склада. Нажмите «Спросить» — ассистент ответит в реальном времени.',
-  ask:'Спросить →',hybrid:'Гибрид',fuel_Petrol:'Бензин',fuel_Hybrid:'Гибрид','fuel_Plug-in Hybrid':'Плагин-гибрид',
-  asst_eye:'Разница',asst_h:'Продавец, который никогда не спит',asst_p:'Половина покупателей смотрят вечером, в выходные или из-за границы. Если никто не отвечает — они уходят к другому. Наш ассистент отвечает каждому — мгновенно, на греческом, английском или русском.',
-  v1h:'Мгновенные ответы',v1p:'Цена, наличие, финансирование — без ожидания.',v2h:'Любой язык',v2p:'Греческий, английский, русский и другие.',
-  demo_u1:'Есть гибрид до €20 000?',demo_b1:'Да — сейчас есть <b>Toyota Yaris Hybrid</b> 2021 за <b>€18 900</b> (46 000 км, полная сервисная история). Хотите фото или тест-драйв?',demo_u2:'Можно посмотреть в субботу?',demo_b2:'Конечно! Я придержу авто и подготовлю его в нашем салоне в Лимасоле в субботу. Во сколько вам удобно? 🚗',
-  s1h:'Ответы 24/7',s1p:'Больше ни одной упущенной заявки вечером или в выходные.',s2h:'Трейд-ин',s2p:'Мгновенная оценка, подтверждение лично.',s3h:'Финансирование',s3p:'От 3,9% годовых, расчёт на месте.',s4h:'Гарантия',s4p:'Каждый авто проверен и с гарантией.',
-  c_eye:'Приезжайте',c_h:'Приезжайте посмотреть авто',c_addr:'Салон',c_phone:'Телефон / WhatsApp',c_hours:'Часы',c_hours_v:'Пн–Пт 09:00–19:00 · Сб 09:00–14:00',c_cta:'💬 Спросите нас',
-  fd_h:'◆ Это демо — представьте, что это ваш автосалон',fd_p:'Весь сайт, многоязычный ассистент 24/7 и два года оптимизации созданы <b>Domani AI</b>. Ваше имя, ваш логотип, ваши авто. → <a href="https://domaniai.com" target="_blank">domaniai.com</a>',foot_by:'Создано Domani AI',
-  greet:'Здравствуйте! 👋 Я ассистент Apollon. Спросите о любом авто, финансировании или запишитесь на тест-драйв — в любое время.',
-  chips:['Гибриды до €20k','Тест-драйв','Оценка трейд-ин','Финансирование']}
+ en:{nav_inv:'Collection',nav_imp:'Import',nav_contact:'Visit',nav_ask:'Concierge',
+  hero_eye:'Private Showroom · Limassol · Est. 1998',hero_h1:'The car you want, <em>answered before you ask.</em>',
+  hero_p:'A curated collection of luxury cars — imported right-hand-drive from Japan and the United Kingdom, prepared and registered in Cyprus. Our concierge replies day or night, in Greek, English or Russian.',
+  hero_cta1:'View the collection',hero_cta2:'Speak to the concierge',stat1:'Serving Cyprus',stat2:'Languages, instantly',stat3:'Concierge, even at night',
+  t1:'Imported from Japan & the UK',t2:'Customs & registration handled',t3:'Road tax & transfer included',t4:'Every car inspected & guaranteed',
+  inv_eye:'The Collection',inv_h:'Currently in the showroom',inv_p:'A private selection. Ask the concierge about any car — availability, import papers, a viewing — answered in seconds.',
+  ask:'Enquire',hybrid:'Hybrid',fuel_Petrol:'Petrol','fuel_Petrol · mild hybrid':'Petrol · mild hybrid',fuel_Hybrid:'Hybrid','fuel_Plug-in Hybrid':'Plug-in Hybrid',
+  'o_UK import · RHD':'UK import · RHD','o_Japan import · RHD':'Japan import · RHD',o_RHD:'RHD',
+  asst_eye:'The Concierge',asst_h:'A private assistant that never closes',asst_p:'Your best buyers browse late — from Limassol, from Moscow, from London. When no one answers, they move on. Our concierge answers every one instantly, in their own language, and books the serious ones for a private viewing.',
+  v1h:'Instant',v1p:'Price, papers, availability — no wait.',v2h:'Multilingual',v2p:'Greek · English · Russian.',online:'online now',online2:'online · replies instantly',ph:'Write to the concierge…',
+  demo_u1:'Is the Range Rover still available? Can you handle registration?',demo_b1:'Yes — the 2023 <b>Range Rover Sport</b> is available, <b>€82,500</b>. A UK import, right-hand drive. We handle customs, registration and road tax for you. Shall I arrange a private viewing in Limassol?',demo_u2:'Да, в субботу?',demo_b2:'With pleasure. I will prepare the car for Saturday at our Limassol showroom. What time suits you?',
+  s1h:'24/7 concierge',s1p:'Never lose a late-night or overseas enquiry again.',s2h:'RHD imports',s2p:'Sourced from Japan & the UK, prepared in Cyprus.',s3h:'Papers handled',s3p:'Customs, registration, road tax and transfer.',s4h:'Guaranteed',s4p:'Inspected, warranted, history verified.',
+  c_eye:'By Appointment',c_h:'Visit the showroom',c_addr:'Showroom',c_phone:'Telephone · WhatsApp',c_hours:'Hours',c_hours_v:'Mon–Fri 09:00–19:00 · Sat by appointment',c_cta:'Ask the concierge',
+  fd_h:'This is a demonstration — imagine it as your marque',fd_p:'The site, the 24/7 multilingual concierge and two years of optimisation are built by <b>Domani AI</b>. Your name, your logo, your collection. → <a href="https://domaniai.com" target="_blank">domaniai.com</a>',foot_by:'Crafted by Domani AI',
+  greet:'Welcome to Apollon Motors. I am your concierge — ask me about any car, imports and registration, or arrange a private viewing. Any time.',
+  chips:['Available now','Import & registration','Private viewing','Financing']},
+ el:{nav_inv:'Συλλογή',nav_imp:'Εισαγωγή',nav_contact:'Επίσκεψη',nav_ask:'Concierge',
+  hero_eye:'Ιδιωτικό Showroom · Λεμεσός · από το 1998',hero_h1:'Το αυτοκίνητο που θέλετε, <em>απαντημένο πριν καν ρωτήσετε.</em>',
+  hero_p:'Μια επιμελημένη συλλογή πολυτελών αυτοκινήτων — εισαγωγή δεξιοτίμονα από Ιαπωνία και Ηνωμένο Βασίλειο, ετοιμασμένα και εγγεγραμμένα στην Κύπρο. Ο concierge μας απαντά μέρα ή νύχτα, στα Ελληνικά, Αγγλικά ή Ρωσικά.',
+  hero_cta1:'Δείτε τη συλλογή',hero_cta2:'Μιλήστε στον concierge',stat1:'Στην Κύπρο',stat2:'Γλώσσες, άμεσα',stat3:'Concierge, ακόμα και τη νύχτα',
+  t1:'Εισαγωγή από Ιαπωνία & Η.Β.',t2:'Τελωνείο & εγγραφή από εμάς',t3:'Τέλη & μεταβίβαση περιλαμβάνονται',t4:'Κάθε αυτοκίνητο ελεγμένο & εγγυημένο',
+  inv_eye:'Η Συλλογή',inv_h:'Τώρα στο showroom',inv_p:'Μια ιδιωτική επιλογή. Ρωτήστε τον concierge για οποιοδήποτε αυτοκίνητο — διαθεσιμότητα, χαρτιά, ραντεβού — απάντηση σε δευτερόλεπτα.',
+  ask:'Ενδιαφέρομαι',hybrid:'Υβριδικό',fuel_Petrol:'Βενζίνη','fuel_Petrol · mild hybrid':'Βενζίνη · ήπιο υβριδικό',fuel_Hybrid:'Υβριδικό','fuel_Plug-in Hybrid':'Plug-in Υβριδικό',
+  'o_UK import · RHD':'Εισαγωγή Η.Β. · δεξιοτίμονο','o_Japan import · RHD':'Εισαγωγή Ιαπωνίας · δεξιοτίμονο',o_RHD:'Δεξιοτίμονο',
+  asst_eye:'Ο Concierge',asst_h:'Ένας ιδιωτικός βοηθός που δεν κλείνει ποτέ',asst_p:'Οι καλύτεροι αγοραστές ψάχνουν αργά — από τη Λεμεσό, τη Μόσχα, το Λονδίνο. Όταν δεν απαντά κανείς, φεύγουν. Ο concierge μας απαντά σε όλους άμεσα, στη γλώσσα τους, και κλείνει ραντεβού για τους σοβαρούς.',
+  v1h:'Άμεσα',v1p:'Τιμή, χαρτιά, διαθεσιμότητα — χωρίς αναμονή.',v2h:'Πολύγλωσσος',v2p:'Ελληνικά · Αγγλικά · Ρωσικά.',online:'online τώρα',online2:'online · απαντά άμεσα',ph:'Γράψτε στον concierge…',
+  demo_u1:'Είναι διαθέσιμο ακόμα το Range Rover; Αναλαμβάνετε την εγγραφή;',demo_b1:'Ναι — το <b>Range Rover Sport</b> 2023 είναι διαθέσιμο, <b>€82.500</b>. Εισαγωγή Η.Β., δεξιοτίμονο. Αναλαμβάνουμε τελωνείο, εγγραφή και τέλη. Να κλείσω ιδιωτικό ραντεβού στη Λεμεσό;',demo_u2:'Да, в субботу?',demo_b2:'Ευχαρίστως. Θα ετοιμάσω το αυτοκίνητο για το Σάββατο στο showroom μας στη Λεμεσό. Τι ώρα σας βολεύει;',
+  s1h:'Concierge 24/7',s1p:'Ποτέ ξανά χαμένη ερώτηση αργά ή από εξωτερικό.',s2h:'Εισαγωγές δεξιοτίμονων',s2p:'Από Ιαπωνία & Η.Β., ετοιμασία στην Κύπρο.',s3h:'Χαρτιά από εμάς',s3p:'Τελωνείο, εγγραφή, τέλη, μεταβίβαση.',s4h:'Εγγυημένο',s4p:'Ελεγμένο, εγγυημένο, επαληθευμένο ιστορικό.',
+  c_eye:'Με Ραντεβού',c_h:'Επισκεφθείτε το showroom',c_addr:'Showroom',c_phone:'Τηλέφωνο · WhatsApp',c_hours:'Ώρες',c_hours_v:'Δευ–Παρ 09:00–19:00 · Σαβ με ραντεβού',c_cta:'Ρωτήστε τον concierge',
+  fd_h:'Αυτό είναι demo — φανταστείτε το ως τη δική σας μάρκα',fd_p:'Το site, ο πολύγλωσσος concierge 24/7 και δύο χρόνια βελτιστοποίησης φτιάχτηκαν από την <b>Domani AI</b>. Το όνομά σας, το λογότυπό σας, η συλλογή σας. → <a href="https://domaniai.com" target="_blank">domaniai.com</a>',foot_by:'Δημιουργία από Domani AI',
+  greet:'Καλώς ήρθατε στην Apollon Motors. Είμαι ο concierge σας — ρωτήστε για οποιοδήποτε αυτοκίνητο, εισαγωγές & εγγραφή, ή κλείστε ιδιωτικό ραντεβού. Οποιαδήποτε ώρα.',
+  chips:['Διαθέσιμο τώρα','Εισαγωγή & εγγραφή','Ιδιωτικό ραντεβού','Χρηματοδότηση']},
+ ru:{nav_inv:'Коллекция',nav_imp:'Импорт',nav_contact:'Визит',nav_ask:'Консьерж',
+  hero_eye:'Частный шоурум · Лимасол · с 1998',hero_h1:'Автомобиль вашей мечты — <em>ответ раньше вопроса.</em>',
+  hero_p:'Тщательно отобранная коллекция люксовых авто — правый руль, импорт из Японии и Великобритании, подготовка и регистрация на Кипре. Наш консьерж отвечает днём и ночью — на греческом, английском или русском.',
+  hero_cta1:'Смотреть коллекцию',hero_cta2:'Написать консьержу',stat1:'На Кипре',stat2:'Языка, мгновенно',stat3:'Консьерж даже ночью',
+  t1:'Импорт из Японии и UK',t2:'Таможня и регистрация — на нас',t3:'Налог и переоформление включены',t4:'Каждый авто проверен и с гарантией',
+  inv_eye:'Коллекция',inv_h:'Сейчас в шоуруме',inv_p:'Частная подборка. Спросите консьержа о любом авто — наличие, документы, просмотр — ответ за секунды.',
+  ask:'Запрос',hybrid:'Гибрид',fuel_Petrol:'Бензин','fuel_Petrol · mild hybrid':'Бензин · мягкий гибрид',fuel_Hybrid:'Гибрид','fuel_Plug-in Hybrid':'Плагин-гибрид',
+  'o_UK import · RHD':'Импорт UK · правый руль','o_Japan import · RHD':'Импорт Япония · правый руль',o_RHD:'Правый руль',
+  asst_eye:'Консьерж',asst_h:'Личный помощник, который не спит',asst_p:'Ваши лучшие покупатели смотрят поздно — из Лимасола, Москвы, Лондона. Если никто не отвечает — они уходят. Наш консьерж отвечает каждому мгновенно, на его языке, и записывает серьёзных на частный просмотр.',
+  v1h:'Мгновенно',v1p:'Цена, документы, наличие — без ожидания.',v2h:'Мультиязычно',v2p:'Греческий · английский · русский.',online:'онлайн сейчас',online2:'онлайн · отвечает сразу',ph:'Написать консьержу…',
+  demo_u1:'Range Rover ещё в наличии? Регистрацию берёте на себя?',demo_b1:'Да — <b>Range Rover Sport</b> 2023 в наличии, <b>€82 500</b>. Импорт из UK, правый руль. Таможню, регистрацию и налог берём на себя. Записать вас на частный просмотр в Лимасоле?',demo_u2:'Да, в субботу?',demo_b2:'С удовольствием. Подготовлю автомобиль к субботе в нашем шоуруме в Лимасоле. В какое время вам удобно?',
+  s1h:'Консьерж 24/7',s1p:'Больше ни одной упущенной заявки ночью или из-за рубежа.',s2h:'Импорт RHD',s2p:'Из Японии и UK, подготовка на Кипре.',s3h:'Документы — на нас',s3p:'Таможня, регистрация, налог, переоформление.',s4h:'Гарантия',s4p:'Проверен, с гарантией, история подтверждена.',
+  c_eye:'По записи',c_h:'Посетите шоурум',c_addr:'Шоурум',c_phone:'Телефон · WhatsApp',c_hours:'Часы',c_hours_v:'Пн–Пт 09:00–19:00 · Сб по записи',c_cta:'Спросить консьержа',
+  fd_h:'Это демонстрация — представьте это как ваш бренд',fd_p:'Сайт, многоязычный консьерж 24/7 и два года оптимизации созданы <b>Domani AI</b>. Ваше имя, ваш логотип, ваша коллекция. → <a href="https://domaniai.com" target="_blank">domaniai.com</a>',foot_by:'Создано Domani AI',
+  greet:'Добро пожаловать в Apollon Motors. Я ваш консьерж — спросите о любом авто, импорте и регистрации или запишитесь на частный просмотр. В любое время.',
+  chips:['В наличии','Импорт и регистрация','Частный просмотр','Финансирование']}
 };
-
-/* answers keyed by chip index, per language */
 const ANS={
- en:["Right now the best hybrid under €20k is the 2021 <b>Toyota Yaris Hybrid</b> — <b>€18,900</b>, 46,000 km, full service history. Shall I send photos or book a test drive?",
-  "Great — which day suits you, this week or the weekend? I'll hold the car and have it ready at our Limassol showroom. 🚗",
-  "Happy to help. Tell me your car's make, model, year and mileage, and I'll give you an instant estimate — our team confirms it in person.",
-  "We offer financing from <b>3.9% APR</b> over 12–84 months. On the Golf GTE (€29,900) that's about <b>€430/month</b>. Want a plan for a specific car?"],
- el:["Το καλύτερο υβριδικό κάτω από €20k είναι το <b>Toyota Yaris Hybrid</b> 2021 — <b>€18.900</b>, 46.000 χλμ, πλήρες ιστορικό. Να στείλω φωτογραφίες ή να κλείσω test drive;",
-  "Τέλεια — ποια μέρα σας βολεύει, αυτή την εβδομάδα ή το σ/κ; Θα κρατήσω το αυτοκίνητο έτοιμο στη Λεμεσό. 🚗",
-  "Ευχαρίστως. Πείτε μου μάρκα, μοντέλο, έτος και χιλιόμετρα, και θα σας δώσω άμεση εκτίμηση — η ομάδα μας επιβεβαιώνει από κοντά.",
-  "Προσφέρουμε χρηματοδότηση από <b>3,9% ΑΠΕ</b> σε 12–84 μήνες. Για το Golf GTE (€29.900) είναι περίπου <b>€430/μήνα</b>. Θέλετε πλάνο για συγκεκριμένο αυτοκίνητο;"],
- ru:["Лучший гибрид до €20k сейчас — <b>Toyota Yaris Hybrid</b> 2021 — <b>€18 900</b>, 46 000 км, полная история. Прислать фото или записать на тест-драйв?",
-  "Отлично — какой день удобен, на этой неделе или в выходные? Придержу авто в салоне в Лимасоле. 🚗",
-  "С удовольствием. Назовите марку, модель, год и пробег — дам мгновенную оценку, команда подтвердит лично.",
-  "Финансирование от <b>3,9% годовых</b> на 12–84 мес. На Golf GTE (€29 900) это около <b>€430/мес</b>. Рассчитать по конкретному авто?"]
+ en:["Yes — that model is in the showroom now and ready to view. It's a right-hand-drive import, fully prepared. Would you like the photos and papers, or a private viewing?",
+  "Of course. Every car is imported right-hand-drive from Japan or the UK, and we handle customs clearance, Cyprus registration, road tax and transfer — you simply collect the keys.",
+  "I'd be glad to arrange a private viewing at our Limassol showroom. Which day suits you — this week or the weekend? I'll have the car prepared for you.",
+  "We offer financing from 3.9% APR over 12–84 months, and we accept your current car in part-exchange. Shall I prepare figures for a specific model?"],
+ el:["Ναι — αυτό το μοντέλο είναι τώρα στο showroom και έτοιμο για θέαση. Εισαγωγή δεξιοτίμονο, πλήρως ετοιμασμένο. Θέλετε φωτογραφίες και χαρτιά, ή ιδιωτικό ραντεβού;",
+  "Φυσικά. Κάθε αυτοκίνητο εισάγεται δεξιοτίμονο από Ιαπωνία ή Η.Β., και αναλαμβάνουμε τελωνείο, εγγραφή Κύπρου, τέλη και μεταβίβαση — εσείς απλώς παίρνετε τα κλειδιά.",
+  "Ευχαρίστως να κλείσω ιδιωτικό ραντεβού στη Λεμεσό. Ποια μέρα σας βολεύει — αυτή την εβδομάδα ή το σ/κ; Θα ετοιμάσω το αυτοκίνητο.",
+  "Προσφέρουμε χρηματοδότηση από 3,9% ΑΠΕ σε 12–84 μήνες, και δεχόμαστε το αυτοκίνητό σας ως ανταλλαγή. Να ετοιμάσω αριθμούς για συγκεκριμένο μοντέλο;"],
+ ru:["Да — эта модель сейчас в шоуруме и готова к просмотру. Правый руль, импорт, полностью подготовлен. Прислать фото и документы или записать на частный просмотр?",
+  "Конечно. Каждый авто — правый руль, импорт из Японии или UK. Таможню, регистрацию на Кипре, налог и переоформление берём на себя — вы просто забираете ключи.",
+  "С радостью запишу вас на частный просмотр в Лимасоле. Какой день удобен — на этой неделе или в выходные? Подготовлю автомобиль.",
+  "Финансирование от 3,9% годовых на 12–84 мес., принимаем ваш авто в трейд-ин. Подготовить расчёт по конкретной модели?"]
 };
-
-/* ---------- language switch ---------- */
 function setLang(lang){
  document.documentElement.lang=lang;
  document.querySelectorAll('[data-i]').forEach(el=>{const k=el.getAttribute('data-i');if(T[lang][k]!=null)el.innerHTML=T[lang][k];});
+ document.querySelectorAll('[data-i-ph]').forEach(el=>{const k=el.getAttribute('data-i-ph');if(T[lang][k]!=null)el.placeholder=T[lang][k];});
  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
  renderGrid();renderChips();
- // reset chat greeting if empty
  const body=document.getElementById('pbody');
- if(body && body.dataset.started!=='1'){body.innerHTML='';botSay(T[lang].greet,false);}
+ if(body&&body.dataset.started!=='1'){body.innerHTML='';bubble(T[lang].greet,'b');}
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
-
-/* ---------- chat ---------- */
 let chatInit=false;
-function renderChips(){
- document.getElementById('chips').innerHTML=T[L()].chips.map((c,i)=>`<button class="chip" onclick="chip(${i})">${c}</button>`).join('');
-}
+function renderChips(){document.getElementById('chips').innerHTML=T[L()].chips.map((c,i)=>`<button class="chip" onclick="chip(${i})">${c}</button>`).join('');}
 function bubble(html,who){const d=document.createElement('div');d.className='bubble '+(who==='u'?'b-user':'b-bot');d.innerHTML=html;const b=document.getElementById('pbody');b.appendChild(d);b.scrollTop=b.scrollHeight;}
-function botSay(html,delay=true){
- const b=document.getElementById('pbody');
- if(!delay){bubble(html,'b');return;}
- const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';b.appendChild(t);b.scrollTop=b.scrollHeight;
- setTimeout(()=>{t.remove();bubble(html,'b');},900+Math.random()*500);
-}
+function botSay(html){const b=document.getElementById('pbody');const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';b.appendChild(t);b.scrollTop=b.scrollHeight;setTimeout(()=>{t.remove();bubble(html,'b');},900+Math.random()*500);}
 function openChat(){const p=document.getElementById('panel');if(!p.classList.contains('open'))toggleChat();}
-function toggleChat(){
- const p=document.getElementById('panel');p.classList.toggle('open');
- const b=document.getElementById('pbody');
- if(p.classList.contains('open')&&!chatInit){chatInit=true;b.dataset.started='0';botSay(T[L()].greet,false);}
-}
+function toggleChat(){const p=document.getElementById('panel');p.classList.toggle('open');const b=document.getElementById('pbody');if(p.classList.contains('open')&&!chatInit){chatInit=true;b.dataset.started='0';bubble(T[L()].greet,'b');}}
 function chip(i){document.getElementById('pbody').dataset.started='1';bubble(T[L()].chips[i],'u');botSay(ANS[L()][i]);}
-function askCar(i){
- openChat();const c=CARS[i];const b=document.getElementById('pbody');b.dataset.started='1';
- const q=L()==='el'?`Πείτε μου για το ${c.name}`:L()==='ru'?`Расскажите о ${c.name}`:`Tell me about the ${c.name}`;
- bubble(q,'u');
- const a=L()==='el'?`Το <b>${c.name}</b> (${c.year}) — ${c.km} χλμ, ${T[L()]['fuel_'+c.fuel]}. Τιμή <b>${c.price}</b>. Διαθέσιμο τώρα. Να κλείσω test drive;`
-  :L()==='ru'?`<b>${c.name}</b> (${c.year}) — ${c.km} км, ${T[L()]['fuel_'+c.fuel]}. Цена <b>${c.price}</b>. В наличии. Записать на тест-драйв?`
-  :`The <b>${c.name}</b> (${c.year}) — ${c.km} km, ${c.fuel}. Priced at <b>${c.price}</b>, available now. Shall I book you a test drive?`;
- botSay(a);
-}
+function askCar(i){openChat();const c=CARS[i];const b=document.getElementById('pbody');b.dataset.started='1';
+ const q=L()==='el'?`Πείτε μου για το ${c.name}`:L()==='ru'?`Расскажите о ${c.name}`:`Tell me about the ${c.name}`;bubble(q,'u');
+ const a=L()==='el'?`Το <b>${c.name}</b> (${c.year}) — ${c.km} χλμ, ${T[L()]['o_'+c.origin]}. Τιμή <b>${c.price}</b>, διαθέσιμο τώρα. Να κλείσω ιδιωτικό ραντεβού;`
+  :L()==='ru'?`<b>${c.name}</b> (${c.year}) — ${c.km} км, ${T[L()]['o_'+c.origin]}. Цена <b>${c.price}</b>, в наличии. Записать на частный просмотр?`
+  :`The <b>${c.name}</b> (${c.year}) — ${c.km} km, ${c.origin}. Priced at <b>${c.price}</b>, available now. Shall I arrange a private viewing?`;botSay(a);}
 function send(){const inp=document.getElementById('pin');const v=inp.value.trim();if(!v)return;document.getElementById('pbody').dataset.started='1';bubble(v,'u');inp.value='';
- const low=v.toLowerCase();let i=0;
- if(/test|drive|δοκιμ|тест|driv/i.test(low))i=1;else if(/trade|ανταλλ|трейд|обмен/i.test(low))i=2;else if(/financ|χρηματ|финанс|loan|rate/i.test(low))i=3;else i=0;
- botSay(ANS[L()][i]);
-}
-
-/* ---------- scroll fx ---------- */
-function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));}
+ const low=v.toLowerCase();let i=0;if(/import|regist|εγγρ|τελων|регист|импорт|таможн/i.test(low))i=1;else if(/view|νview|ραντεβ|θέασ|просмотр|driv|test/i.test(low))i=2;else if(/financ|χρηματ|финанс|trade|ανταλλ|трейд|rate|loan/i.test(low))i=3;else i=0;botSay(ANS[L()][i]);}
+function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));}
 addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>10));
-
-/* init */
 renderGrid();renderChips();observe();
 </script>
 </body>
